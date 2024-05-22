@@ -6,8 +6,15 @@
  */
 let height = document.querySelector('#height')
 let weight = document.querySelector('#weight')
+let calcWeight = document.querySelector('#calc_weight')
 let goals = document.querySelector('#goals')
-let btn = document.querySelector('#result')
-btn.addEventListener('click',function(){
-    let Result = (Number(height)-100)*0.9
+let result = document.querySelector('#result')
+console.log(height.value)
+result.addEventListener('click',function(){
+    console.log(height.value)
+    let nomalWeight = (Number(height.value)-100)*0.9
+    console.log(calcWeight)
+    let userGoals = Number(weight.value)-nomalWeight
+    calcWeight.value = `${nomalWeight}`
+    goals.value = `${userGoals}kg 감량이 필요합니다.`
 })
