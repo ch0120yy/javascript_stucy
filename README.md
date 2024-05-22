@@ -105,3 +105,41 @@
 * `배열명[index]`
 * 배열의 `length`속성은 index와 다르게 1부터 인식한다.
 * `배열.length` `객체.속성`
+### 배열의 추가 속성
+* `array.length` : 배열의 길이(개수) 확인
+* `array.push()` : 배열의 마지막 자식 위치로 데이터 추가
+* `array.pop()` : 배열의 끝 값 제거
+* `array.unshift()` : 배열의 시작 위치에 데이터 추가
+* `array.shift()` : 배열의 시작 값 제거
+## 객체 object
+* `변수생성키워드 객체명 = {속성:값, 속성:값, ...}`
+* `변수생성키워드 객체명 = {Key:값, Key:값, ...}`
+* 객체의 속성은 **Key** 라고도 부른다.
+* 속성(Key)명은 그 속성이 가진 값에 어울리는 의미적인 이름으로 작성한다. (정해진 키워드가 아님)
+* 객체 속성에 2개 이상의 값을 설정할 때는 배열을 이용해야 한다.
+* `객체명 = {Key:['배열 첫번째 값', '배열 두번째 값',...],...}`
+## 객체와 배열
+* 키:값 구조로 된 객체를 큰 분류로 2개 이상 제작할 때는 배열을 이용해야 한다.
+* 배열을 먼저 묶고 배열의 값 위치에 객체를 의미하는 `{}`를 묶어주는 것으로 시작한다.
+* `const 이름 = [{},{},{},...]`
+* `const 이름 = [{key:value, key:value,},{},{},...]`
+* `const 이름 = [{key:[V1,V2], key:value,},{},{},...]`
+---------------------------------
+## BOM, DOM
+### BOM (Browser Object Model)
+* `window` 최상위 객체를 기준으로 속성, 메소드 이용
+* 자주 사용하는 속성, 메소드 : `alert()`, `prompt()`, `confirm()`, `location()` 등...
+* `window.alert();`
+* `alert();`
+### DOM (Document Object Model)
+* `document` 본문 최상위 객체 대상으로 속성, 메소드 이용, 생략할 수 없다.
+#### DOM 선택 시 자주 사용하는 메서드(함수) 종류
+* `document.getElementsByTagName("태그명")`
+* `document.getElementsByClassName("클래스명")`
+* `document.getElementById("아이디명")`
+* `document.querySelector("태그명")`
+* `document.querySelector(".클래스명")`
+* `document.querySelector("#아이디명")`
+* `document.querySelectorAll("태그명")`
+* `document.querySelectorAll(".클래스명")`
+* `getElements...`와 `querySelectorAll` 함수는 `index`를 사용해서 대상을 선택하므로 사용 시 주의가 필요하다.
