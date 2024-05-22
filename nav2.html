@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav-2 | JS</title>
+    <script src="./script/nav2.js" defer></script>
+    <link rel="stylesheet" href="./style/reset.css">
+    <style>
+        header {
+            height:100px; padding: 0 40px;
+            display:flex; align-items:center;
+            justify-content:space-between;
+        }
+        header h1 {}
+        header h1 a {}
+        header h1 a img {}
+        header nav {}
+        header nav .gnb {
+            display:flex;
+        }
+        header nav .gnb > li {
+            width:200px; position:relative;
+        }
+        header nav .gnb > li > a {
+            display:block; line-height:40px;
+            text-transform:uppercase;
+        }
+        header nav .gnb > li > .sub {
+            position:absolute; left:0; top:40px;
+            background-color: #fff;
+            width:100%; height:300px;
+        }
+        header nav .gnb > li > .sub::after {
+            content:''; display:block;
+            width:1px; height:270px; background-color:#f5f5f5;
+            position:absolute; right:5px; top:15px;
+        }
+        header nav .gnb > li:last-of-type > .sub::after {display:none;}
+        header nav .gnb > li > .sub li {}
+        header nav .gnb > li > .sub li a {
+            text-transform:capitalize;
+            display:block; line-height: 50px;
+            padding-left: 5px;
+        }
+        main {}
+        main .visual {
+            background-size: 100%;
+            height:calc(100vh - 100px);
+            background-position:center;
+            background-image:url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-repeat:no-repeat;
+        }
+        main .visual h1 {
+            padding-top: 250px;
+            text-align:center; color:#FFF;
+            font-size:4rem; font-weight: 700;
+            text-shadow:0 0 30px rgba(0, 0, 0, .7);
+        }
+        main .visual h1 span {
+            display:inline-block;
+            font-size: 5rem; margin:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#"><img src="./images/logo.jpg" alt="posco group brochure"></a></h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">posco overview</a>
+                    <ul class="sub">
+                        <li><a href="#">posco group</a></li>
+                        <li><a href="#">milesones</a></li>
+                        <li><a href="#">posco highlights</a></li>
+                    </ul></li>
+                <li><a href="#">posco vision</a>
+                    <ul class="sub">
+                        <li><a href="#">경영이념</a></li>
+                        <li><a href="#">기업시민헌장</a></li>
+                        <li><a href="#">기업시민 5대 비전</a></li>
+                        <li><a href="#">안전경영</a></li>
+                        <li><a href="#">환경경영</a></li>
+                        <li><a href="#">포스코그룹 비전</a></li>
+                    </ul></li>
+                <li><a href="#">posco business</a>
+                    <ul class="sub">
+                        <li><a href="#">철강</a></li>
+                        <li><a href="#">글로벌 인프라</a></li>
+                    </ul></li>
+                </ul>
+            </nav>
+        </header>
+    <main>
+        <div class="visual">
+            <h1>철강을 넘어<br>
+                <span>Green & Mobility</span><br>
+                중심으로의 변화</h1>
+        </div>
+    </main>
+</body>
+</html>

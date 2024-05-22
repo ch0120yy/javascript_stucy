@@ -143,3 +143,17 @@
 * `document.querySelectorAll("태그명")`
 * `document.querySelectorAll(".클래스명")`
 * `getElements...`와 `querySelectorAll` 함수는 `index`를 사용해서 대상을 선택하므로 사용 시 주의가 필요하다.
+### addEventListener
+* `객체.addEventListner('mouseover',function(){})` 영역에 마우스를 올렸을 때 이벤트
+* `객체.addEventListner('mouseout',function(){})` 영역에서 마우스가 벗어났을 때 이벤트
+# 가족관계
+## 부모 속성
+### parentNode, parentElement
+* `객체.parentNode.속성 = '속성값';`
+* `객체.parentNode.parentNode.속성 = '속성값';`
+## 자식 자손 속성
+### childNodes
+* 공백을 포함한 속성을 잡아줌
+* text = 공백노드
+### children
+* 요소만 잡아줌

@@ -1,8 +1,17 @@
 main {
     background-color: aqua;
+    width:390px; margin: 30px auto;
+    text-align: center;
 }
-main h1 {}
-main p {}
+main h1 {
+    background-color:#5ADF9F; color:#fff;
+    font-size:1.125rem; font-weight:700;
+    line-height: 54px;
+}
+main p {
+    text-align: left;
+    margin: 40px 0 40px 16px;
+}
 main ul {}
 main ul li {}
 main p {}
