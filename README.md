@@ -157,3 +157,39 @@
 * text = 공백노드
 ### children
 * 요소만 잡아줌
+-------------------
+## 가족관계선택속성
+* `parentNode`, `parentElement`
+* `header > nav` 관계 DOM이 있을 때 `nav`의 부모를 선택할 때 이용할 수 있다.
+* DOM.parentNode, DOM.parentElement.parentElement...
+* `childNodes`, `children`
+* `header > nav` 관계 DOM이 있을 때 `nav`의 자식, 자손을 선택할 때 이용할 수 있다.
+* DOM.childNodes, DOM.children.children... 등
+* childNode, children[n] == 부모 자식:nth-child(n)
+* `firstChild`, `firstElementChild`
+* 첫번째 자식을 선택할 때 사용 (= first-child)
+* `lastChild`, `lastElementChild`
+* 마지막 위치의 자식을 선택할 때 사용 (= last-child)
+* `nextChild`, `nextElementChild`
+* JS 다음 형제 처리
+* `nextChild` 공백 포함 다음 형제 속성
+* `nextElementChild` 다음 형제 요소만 인식 속성
+* `previousSibling`, `previousElementSibling`
+* `previousSibling` 공백 포함 다음 형제 속성
+* `previousElementSibling` 다음 형제 요소만 인식 속성
+## 자바스크립트 객체 속성
+* `innerHTML` : 객체.속성
+* 자바스크립트로 HTML DOM 제작 시 HTML 읽기, 삽입, 수정 진행용으로 사용하는 속성
+* `<span>0</span>` -> `<em>1</em>`
+* `<span class="a">0</span>` -> `<span class="b">0</span>`
+* `innerText` : 객체.속성
+* `<span>0</span>` span태그가 아닌 단순 문자 0값만 변경하려고 할 때 사용하는 속성
+## 자바스크립트 연산자
+* `=` 대입연산자
+* 새로운 값이 대입되면 기존 값을 제거한다.
+* `var a = 10`
+* `a = 20` //최종 a의 결과는? 20
+* `+=` 복합대입연산자
+* 새로운 값이 대입될 때 기존 값에 추가 대입된다.
+* `var a = 10`
+*`a += 20` //최종 a의 결과는? 30 `a = a+20`
