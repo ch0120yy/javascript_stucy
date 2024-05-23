@@ -15,6 +15,6 @@ result.addEventListener('click',function(){
     let nomalWeight = (Number(height.value)-100)*0.9
     console.log(calcWeight)
     let userGoals = Number(weight.value)-nomalWeight
-    calcWeight.value = `${nomalWeight}`
-    goals.value = `${userGoals}kg 감량이 필요합니다.`
+    // calcWeight.value = ``
+    goals.value = `적정체중은 ${nomalWeight}kg이며, ${userGoals}kg 초과되셨습니다.`
 })

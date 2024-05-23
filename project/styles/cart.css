@@ -1,0 +1,91 @@
+header {}
+main {
+    background-color: lightblue;
+    width:1000px; margin:0 auto;
+}
+h1 {
+    text-align:center;
+    font-size:2rem; font-weight:500;
+    margin: 50px 0;
+}
+.cart_wrap {background-color: aqua;}
+.cart_wrap .top {
+    background-color: yellow;
+    border-bottom: 1px solid #636363;
+    padding:12px 10px; margin-bottom:20px;
+    display:flex; flex-flow:row wrap;
+    align-items: center;
+}
+.cart_wrap .top input[name^=all] {}
+.cart_wrap .top input[name^=all]:checked + label {}
+.cart_wrap .top label {
+    letter-spacing: -0.2px;
+    color:#333; margin-right: 15px;
+}
+.cart_wrap .top label::after {
+    content:''; display:inline-block;
+    width: 1px; height:10px; background-color:#aaa;
+    position: relative; right: -10px; top:-1px;
+}
+.cart_wrap .top label .select_num {}
+.cart_wrap .top label .total {}
+.cart_wrap .top .select_delete {
+    letter-spacing: -0.2px;
+    color:#333;
+}
+/* ============================ 장바구니 아이템 영역 */
+.cart_wrap .item_wrap {background-color:lime;}
+.cart_wrap .item_wrap .item > * {border:1px solid red;}
+.cart_wrap .item_wrap .item {
+    background-color: tomato;
+    display: flex; flex-flow:row nowrap;
+    justify-content:space-between; align-items:center;
+    padding: 20px 10px;
+    border-bottom:1px solid #aaa;
+}
+.cart_wrap .item_wrap .item .select {width:24px}
+.cart_wrap .item_wrap .item .select input[name^=ite] {}
+.cart_wrap .item_wrap .item li {}
+.cart_wrap .item_wrap .item li:nth-child(2) a{
+    display:grid;
+    grid-template-areas: 
+    'photo name'
+    'photo detail';
+}
+.cart_wrap .item_wrap .item li a .photo {
+    margin-right: 30px;
+    grid-area:photo;
+    width: 90px; height:100px; background-color: #aaa;
+}
+.cart_wrap .item_wrap .item li a .photo img {}
+.cart_wrap .item_wrap .item li a h2 {
+    font-weight:600; grid-area:name;
+    padding: 20px 0 0;
+}
+.cart_wrap .item_wrap .item li a .detail {
+    font-size:0.875rem; color:#aaa;
+    padding: 0 0 20px;
+    grid-area:detail;
+}
+.cart_wrap .item_wrap .item .num {
+    
+}
+.cart_wrap .item_wrap .item .num button {
+    width:24px; height: 24px;
+    border: 0; outline:none;
+}
+.cart_wrap .item_wrap .item .num input[name=count] {
+    border: 0; outline:none;
+    width:40px;
+}
+.cart_wrap .item_wrap .item .price {
+    display:flex; flex-flow:column nowrap;
+    text-align:right;
+}
+.cart_wrap .item_wrap .item .price .total_price {
+    font-size:1.5rem; font-weight:700;
+}
+.cart_wrap .item_wrap .item .price .original_price {
+    color:#aaa; text-decoration:line-through;
+}
+.cart_wrap .item_wrap .item li .item_delete {}

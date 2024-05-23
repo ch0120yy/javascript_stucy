@@ -1,5 +1,5 @@
 main {
-    width:390px; margin: 30px auto;
+    width:430px; margin: 30px auto;
     text-align: center; background-color:#fdfdfd;
 }
 main h1 {
@@ -30,14 +30,17 @@ main ul li .form {
     justify-content:space-between;
     font-weight:600;
 }
-main ul li .form:last-of-type {height:39px;}
+main ul li .form {height:39px;}
 main ul li .form input[type=text] {
     border:0; outline:none; font-size: 0.875rem;
-    letter-spacing:-0.2px;
+    letter-spacing:-0.4px;
     background-color:#EFEFF9;
 }
+main ul li .form input[id=goals] {}
+main ul li .form input[id=goals],
+main ul li:last-of-type .form {width: 300px;}
 main ul li span:nth-of-type(2){}
-main p {padding:0 16px;}
+main p {padding:0 32px;}
 main p #result {
     border-radius:30px; border: 1px solid #0EAD61;
     box-shadow:0 0 4px rgba(0, 0, 0, .2);
