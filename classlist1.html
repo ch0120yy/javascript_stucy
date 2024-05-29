@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList-1 | JS</title>
+    <script src="./script/classlist1.js" defer></script>
+    <style>
+        .set1 {
+            background-color:yellow;
+            border-top:2px solid blue;
+        }
+        .set2 {color:red;} /* 공통 */
+        .set3 {background-color: aqua; width: 130px; height:30px; transition:transform .3s;}
+        .set3:hover {transform:scalex(1.1);}
+        #ip_security {
+            width:60px; height:30px;
+            background-color:#ddd; border:0;
+            border-radius:15px;
+            cursor:pointer; text-align:left;
+            padding-top:2.5px;
+            transition:background-color 0.2s linear;
+        }
+        #ip_security.on {background-color:green;}
+        #ip_security span {
+            width:24px; height:24px;
+            border-radius: 50%;
+            background-color:#fff;
+            display:inline-block;
+            transition:transform 0.2s linear;
+        }
+        #ip_security span.on {
+            transform: translateX(25px);
+        }
+        /* -------------------- */
+        .qa {}
+        .qa .q {
+            border-bottom:1px dashed #aaa;
+            padding:10px 15px;
+        }
+        .qa .a {
+            background-color:#eee;
+            padding:10px 15px;
+            display:none;
+        }
+        .qa .a.on {display:block;}
+    </style>
+</head>
+<body>
+    <div class="qa">
+        <div class="q">질문1</div>
+        <div class="a">답변1</div>
+        <div class="q">질문2</div>
+        <div class="a">답변2</div>
+    </div>
+    <hr>
+    <ul class="list">
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+        <li>list 5</li>
+        <li>list 6</li>
+    </ul>
+    <hr>
+    <button type="button" id="ip_security">
+        <span></span>
+    </button>
+</body>
+</html>
