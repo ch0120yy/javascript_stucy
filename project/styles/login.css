@@ -1,0 +1,32 @@
+/* js 호출용 design class */
+.no_input {
+    color:green;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+.error_input{
+    color:red;
+    font-weight:900;
+    font-size: 0.875rem;
+}
+/* 적용 */
+#login {text-align:center;}
+#login ul {}
+#login ul li {}
+#login ul li input[id^=user] {
+    border:1px solid #91289b; outline:none;
+    border-radius:15px;
+    line-height: 30px; width: 250px;
+    padding: 0 16px; margin-top: 10px;
+}
+#login .error {margin-top:10px;}
+#login .btn {
+    margin-top: 10px;
+}
+#login .btn #login_btn {
+    width: 250px; line-height: 30px;
+    border-radius: 15px; border:2px solid rgba(98, 19, 105,0.3);
+    background-color:#fff;
+}
+.search {text-align: center; margin-top:15px;}
+.search a {}
