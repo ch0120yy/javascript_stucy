@@ -1,0 +1,31 @@
+body,html {scroll-behavior:smooth;}
+main .bg {height:100vh; background-size:cover; margin-bottom:200px;}
+main .bg:nth-child(1) {background-image:url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+main .bg:nth-child(2) {background-image:url(https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1121&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+main .bg:nth-child(3) {background-image:url(https://images.unsplash.com/photo-1543369715-eb5ecb1a4bf0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+main .bg:nth-child(4) {background-image:url(https://images.unsplash.com/photo-1544990354-f020466ec1ba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+nav {
+    position: fixed; right:50px; bottom:150px;
+    display:flex; flex-flow:column nowrap;
+}
+nav a {
+    background-color:rgba(0, 0, 0, .8);
+    border:1px solid #000;
+    width:30px; height:30px; border-radius:50%;
+    position:absolute; right:0;
+    transition:all .5s; overflow:hidden;
+}
+.nav_b .btn:nth-child(1) {top:0;}
+.nav_b .btn:nth-child(2) {top:35px;}
+.nav_b .btn:nth-child(3) {top:70px;}
+.nav_b .btn:nth-child(4) {top:105px;}
+.nav_b .btn:hover {width:80px; border-radius:10px;}
+.nav_b .btn::after {
+    display:inline-block; position:absolute; right:0;
+    padding:10px; line-height: 8px; color:#f3f3f3;
+    white-space:nowrap; /* 줄바꿈 되지 않고 한 줄 처리 */
+}
+.nav_b .btn:nth-child(1):hover::after {content:'Trip To';}
+.nav_b .btn:nth-child(2):hover::after {content:'Trip A';}
+.nav_b .btn:nth-child(3):hover::after {content:'Trip B';}
+.nav_b .btn:nth-child(4):hover::after {content:'Trip C';}
