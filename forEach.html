@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문es6 | JS</title>
+    <script src="./script/forEach.js" defer></script>
+    <link rel="stylesheet" href="./style/reset.css">
+    <style>
+        nav {}
+        nav .gnb {
+            width: 300px;
+        }
+        nav .gnb>li {
+            border-bottom: 1px dashed #555;
+            position: relative;
+        }
+        nav .gnb>li>a {
+            display: block;
+            line-height: 50px;
+            background-color: #e5e5e5;
+        }
+        nav .gnb>li>.sub {
+            background-color: #222;
+            position: absolute;
+            left: 300px;
+            top: 0;
+            width: 250px;
+        }
+        nav .gnb>li>.sub li {}
+        nav .gnb>li>.sub li a {
+            display: block;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <a href="#">menu1</a>
+            <a href="#">menu2</a>
+            <a href="#">menu3</a>
+            <a href="#">menu4</a>
+        </nav>
+        <ul class="snb">
+            <li><a href="#">s_menu1</a></li>
+            <li><a href="#">s_menu2</a></li>
+            <li><a href="#">s_menu3</a></li>
+            <li><a href="#">s_menu4</a></li>
+        </ul>
+    </main>
+    <header>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">m1</a>
+                    <ul class="sub">
+                        <li><a href="#">s1</a></li>
+                        <li><a href="#">s2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">m2</a>
+                    <ul class="sub">
+                        <li><a href="#">s1</a></li>
+                        <li><a href="#">s2</a></li>
+                        <li><a href="#">s3</a></li>
+                        <li><a href="#">s4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">m3</a>
+                    <ul class="sub">
+                        <li><a href="#">s1</a></li>
+                        <li><a href="#">s2</a></li>
+                        <li><a href="#">s3</a></li>
+                        <li><a href="#">s4</a></li>
+                        <li><a href="#">s5</a></li>
+                        <li><a href="#">s6</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
