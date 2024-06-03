@@ -1,0 +1,190 @@
+html,body {}
+/* 공통적용 */
+div > .sub_title,
+section > .sub_title {
+    color:#888;
+    font-size: 1.3rem; line-height:1.2;
+}
+/* ---------------------------- header ---------------------------- */
+header {
+    width:100%; position:fixed; top:0; left:0; z-index:999;
+    background-color:#fff; height: 70px; padding:0 30px;
+    display:flex; flex-flow:row wrap;
+    justify-content:space-between; align-items:center;
+}
+header h1 {}
+header h1 a {}
+header h1 a img {}
+/* ------------- gnb ------------- */
+header .gnb_g {}
+header .gnb_g .sub_bg {
+    content:''; display:block; width:100%; height: 220px;
+    position:absolute; top:70px; left:0;
+    border: 1px solid lime; /* 임시 작성 */
+}
+header .gnb_g .gnb {display:flex; flex-flow:row wrap;}
+header .gnb_g .gnb > li {margin-right:100px; position:relative;}
+header .gnb_g .gnb > li > a {
+    line-height:70px; font-weight:700;
+    width:100%; display:block;
+}
+header .gnb_g .gnb li .sub {
+    background-color: #fff;
+    position:absolute; top:60px; left:0;
+    z-index:999; overflow:hidden;
+}
+header .gnb_g .gnb li .sub li {}
+header .gnb_g .gnb li .sub li a {
+    white-space: nowrap; display:block;
+    line-height:30px; width:100%;
+}
+header .gnb_g .gnb li .sub li a img {width:170px;}
+/* ------------- lnb ------------- */
+header .lnb {display:flex;}
+header .lnb .all_menu {display:none;}
+header .lnb a {
+    margin-left:10px; width:20px; height:25px;
+    background:url(../images/ico_header.png);
+}
+header .lnb a:first-child {margin:0; width:24px; background:none;}
+header .lnb .user_menu {}
+header .lnb .notice {background-position:right top;}
+/* ---------------------------- main ---------------------------- */
+/* ------------- visual ------------- */
+main {}
+.visual {
+    height:100vh;
+    background:url(../images/visual.png) no-repeat center;
+    background-size:cover; background-attachment:fixed;
+    position:relative;
+}
+.visual .visual_cont {text-align: center; color:#fff; padding-top: 110px;}
+.visual .visual_cont h2 {font-size:5rem; font-weight:700;}
+.visual .visual_cont p {margin:30px 0; font-size: 1.2rem;}
+.visual .visual_cont .cont_link {}
+.visual .visual_cont .cont_link a {
+    background-color:#002c5f; color:#fff;
+    padding: 10px 20px; display:inline-block;
+}
+/* ------ scroll ------ */
+.visual .scroll {
+    text-align: center;
+    width:100%; position:absolute; bottom:110px;
+    animation: scroll_mouse .9s infinite linear alternate;
+}
+.visual .scroll img {width:54px; filter:invert(1);}
+@keyframes scroll_mouse {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(20px);}
+}
+/* ------------- advantage ------------- */
+.advantage {
+    padding:50px 30px;
+    display: flex; flex-flow:row wrap;
+    justify-content:space-between;
+}
+.advantage .advantage_txt {width:500px;}
+.advantage .advantage_txt h2 {
+    font-size: 2.5rem; line-height: 1.2;
+}
+.advantage .advantage_txt h2 span {font-weight:700;}
+.advantage .advantage_txt p {}
+/* ------ advantage 영역 ------ */
+.advantage .advantage_cont {
+    width:calc(100% - 500px);
+    display:flex; flex-flow:row nowrap; overflow-x:scroll;
+    padding-bottom: 20px;
+}
+.advantage .advantage_cont a {margin-right: 30px;}
+.advantage .advantage_cont a p {margin: 6px 0;}
+.advantage .advantage_cont a p img {}
+.advantage .advantage_cont a p:nth-child(2) {}
+.advantage .advantage_cont a h3 {color:#002c5f; font-size:1.3rem; line-height:1.5;}
+.advantage .advantage_cont a h3 span {
+    background-color:#002c5f; color:#fff;
+    font-size:1rem; padding:6px; display:inline-block;
+}
+/* ------------- design ------------- */
+.design {
+    height: 80vh; padding: 200px 0 0;
+    position:relative;
+}
+.design h2 {
+    color:#ddd;
+    font-size: 15rem; font-weight:900;
+    position:absolute;
+    left:50%; top: 100px; transform:translateX(-50%);
+    z-index:90;
+}
+.design p {
+    z-index:100; position:relative;
+    text-align: center;
+}
+.design p img {width:700px;}
+/* ------------- design ------------- */
+.color {}
+.color .content_txt {background-color:#333; padding:70px 30px;}
+.color .content_txt h2 {
+    font-size: 2.5rem; line-height:1.2; color:#fff;
+}
+.color .content_txt h2 span {font-weight:700;}
+.color .content_txt p {margin:14px 0; color:#aaa;}
+.color .content_txt .color_list {display:flex;}
+.color .content_txt .color_list a {
+    width:34px; height:34px; border-radius:50%;
+    margin-right: 10px;
+}
+.color .content_txt .color_list a:nth-child(1) {background-color:#fff;}
+.color .content_txt .color_list a:nth-child(2) {background-color:#aaa;}
+.color .content_txt .color_list a:nth-child(3) {background-color:#888;}
+.color .color_img {overflow:hidden; position: relative; top:-80px;}
+.color .color_img img {width:500px; float:right;}
+/* ------------- safety ------------- */
+.safety {
+    padding: 100px 0; text-align:center;
+    background-color:#f5f5f5;
+}
+.safety h2 {font-size: 2.5rem; line-height:1.2;}
+.safety h2 span {font-weight:700;}
+.safety p {margin:10px 0 30px;}
+.safety video {width:800px;}
+/* ------------- trim ------------- */
+.trim {padding:100px 30px;}
+.trim h2 {font-size:2.5rem; line-height: 1.2;}
+.trim h2 span {font-weight:700;}
+.trim > p {margin:10px 0;}
+.trim a {
+    background-color:#007fa8; color:#fff;
+    padding:10px 20px; margin-bottom: 50px;
+    display:inline-block;
+}
+/* ------ trim 리스트 ------ */
+.trim .trim_cont {display: flex;}
+.trim .trim_cont li {text-align:center; flex:1;}
+.trim .trim_cont li p {}
+.trim .trim_cont li p img {width:250px;}
+.trim .trim_cont li h3 {
+    font-size:1.3rem; line-height:1.2;
+    color:#007fa8; font-weight:700;
+}
+.trim .trim_cont li p:nth-last-of-type(2) {line-height:1.2; margin:10px 0;}
+.trim .trim_cont li .price {}
+.trim .trim_cont li .price span {font-size: 1.3rem; font-weight: 700;}
+/* ---------------------------- footer ---------------------------- */
+footer {
+    background-color:#002c5f;
+    color: #eee; padding:50px 30px;
+    display:grid;
+    grid-template-areas:'ft_itm1 ft_itm2 ft_itm2  ft_itm3 ft_itm3';
+}
+footer .ft_itm1 {width:150px;}
+footer .ft_itm1 img {}
+footer .ft_itm2 {
+    display:flex; flex-flow:column wrap;
+    width:calc(100% - 150px);
+    padding-left: 50px; font-size:0.875rem;
+}
+footer .ft_itm2 span {line-height:30px;}
+footer .ft_itm2 span a {color:#eee; text-decoration:underline;}
+footer .ft_itm3 {}
+footer .ft_itm3 li {line-height:30px; font-size:0.875rem;}
