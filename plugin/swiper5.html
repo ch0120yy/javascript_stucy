@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper-5</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        main {
+            position: relative; /* 페이지번호, 이전 다음 기준 */
+            background-color:aqua;
+            width:1000px; height:600px;
+            margin:30px auto;
+        }
+        #visual_slide {
+            width:500px; height:400px;
+            background-color:rgb(255, 255, 123);
+            font-size:3rem;
+        }
+        /* pagination css */
+        main .swiper-pagination {}
+        main .swiper-pagination .swiper-pagination-bullet {background-color:green; opacity:.5; /* 기본값 0.2 */}
+        main .swiper-pagination .swiper-pagination-bullet-active {background-color:green; opacity:1;}
+        main .swiper-button-next,
+        main .swiper-button-prev {color:lime;}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="swiper" id="visual_slide"> <!-- position:relative -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">1</div>
+                <div class="swiper-slide">2</div>
+                <div class="swiper-slide">3</div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </main>
+    <!-- 슬라이드의 부가속성 (페이지 번호, 이전 다음 버튼 등) -->
+    <script>
+        const visual_s = new Swiper('#visual_slide',{
+            autoplay:{delay:1000},
+            loop:true,
+            // swiper-pagination Js
+            pagination:{
+                el:'main .swiper-pagination', // 부모 필수
+                type:'bullets',
+            },
+            // navigation
+            navigation:{
+                nextEl:'main .swiper-button-next',
+                prevEl:'main .swiper-button-prev',
+            },
+        })
+    </script>
+</body>
+</html>

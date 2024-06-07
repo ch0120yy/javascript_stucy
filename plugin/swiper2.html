@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper-2</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .project-slide {
+            width:1000px; height:500px;
+            border:1px solid #000;
+            margin:50px auto 0;
+        }
+        .project-slide .swiper-slide {
+            display:flex; align-items:center;
+            justify-content:space-around;
+            background-color:#FFF;
+        }
+        .project-slide .swiper-slide h1 {font-weight:700;}
+        .project-slide .swiper-slide h1+p {
+            width:400px; height:400px; overflow:hidden;
+            border: 1px solid #555;
+        }
+        .project-slide .swiper-slide h1+p img {width:100%;}
+        .project-slide .swiper-slide p {
+            display:flex; flex-flow:column nowrap;
+            text-align:center;
+        }
+        .project-slide .swiper-slide p em,
+        .project-slide .swiper-slide p span {
+            line-height:1.7; width:260px;
+        }
+        .project-slide .swiper-slide p a {
+            background-color:#222; color:#FFF;
+            width:260px; line-height:50px; margin-bottom:5px;
+        }
+        .project-slide .swiper-slide p a:hover {color:#ff0;}
+    </style>
+</head>
+<body>
+    <div class="swiper project-slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <h1>project-web</h1>
+                <p><img src="https://images.unsplash.com/photo-1581316693711-a0bee730e97e?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></p>
+                <p>
+                    <em>24.06.01~24.06.07</em>
+                    <em>네이버 리디자인</em>
+                    <span>photoshop, figma, html, css,javascript, jquery, swiper</span>
+                    <span>반응형웹 有</span>
+                    <a href="#">결과보기</a>
+                    <a href="#">gitHub보기</a>
+                    <a href="#">figma기획보기</a>
+                </p>
+            </div>
+            <div class="swiper-slide slide2">
+                <h1>project-web2</h1>
+                <p><img src="https://images.unsplash.com/photo-1566160995964-4d7bd54dbaf4?q=80&w=1285&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></p>
+                <p><a href="#">결과보기</a>
+                    <a href="#">gitHub보기</a>
+                    <a href="#">figma기획보기</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const project_s = new Swiper('.project-slide',{
+            autoplay:{delay:1000},
+            effect:'fade',
+        })
+    </script>
+</body>
+</html>

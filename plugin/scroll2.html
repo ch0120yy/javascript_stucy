@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll-2</title>
+    <link rel="stylesheet" href="./script/rel">
+    <!-- 스크롤트리거 플러그인 연결 주소 (필수) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        main {}
+        main section {height:100vh; border:10px solid #000;}
+        main .s2 {}
+        main .s2 h1 {}
+        main .s2 h2 {}
+        main .s2 h3 {}
+        main .s2 .move_ani {animation:move .8s .5s both;}
+        main .s2 .move2_ani {animation:move2 .7s .5s both;}
+        @keyframes move {
+            0% {transform:translateX(0); opacity:0;}
+            100% {transform:translateX(100px); opacity:1;}
+        }
+        @keyframes move2 {
+            0% {transform:scaleX(0); opacity:0;}
+            100% {transform:scaleX(1); opacity:1;}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>1</section>
+        <section class="s2">
+            <h1>scrollTrigger</h1>
+            <h2>실무에서도 많이 사용하는 강력한 스크롤 플러그인</h2>
+            <h3>사용 시 플러그인 연결 주소를 반드시 연결해야 한다.</h3>
+        </section>
+    </main>
+    <script>
+        // classList js를 trigger에서 사용하고 싶다면?
+        // gsap.to가 아닌 ScrollTrigger.create 함수를 별도 사용
+        // 문법(아래)
+        // ScrollTrigger.create({옵션:값, 옶션:값,})
+        // 필수 옵션 trigger:적용대상
+        const h1 = document.querySelector('.s2 h1')
+        const h123 = document.querySelectorAll('.s2 > *')
+        ScrollTrigger.create({
+            trigger:'.s2 h1',
+            onEnter:()=> h1.classList.add('move_ani')
+            // 객체.classList.add('적용클래스명')
+            // '.s2 h1'.classList.add('적용클래스명') (X)
+        })
+        for(let i of h123){
+            ScrollTrigger.create({
+                trigger:i,
+                onEnter:()=> i.classList.add('move_ani')
+            })
+        }
+        for(let i of h123){
+            gsap.to(i,{
+                ScrollTrigger:i.parentNode,
+                duration:1,
+                x:500, y:50,
+            })
+        }
+    </script>
+</body>
+</html>

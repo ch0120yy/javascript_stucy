@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper-4</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        #visual_slide {
+            width:500px; height:400px;
+            background-color:rgb(255, 255, 123);
+            font-size:3rem;
+        }
+        /* pagination css */
+        #visual_slide .swiper-pagination {}
+        #visual_slide .swiper-pagination .swiper-pagination-bullet {background-color:green; opacity:.5; /* 기본값 0.2 */}
+        #visual_slide .swiper-pagination .swiper-pagination-bullet-active {background-color:green; opacity:1;}
+        #visual_slide .swiper-button-next,
+        #visual_slide .swiper-button-prev {color:lime;}
+    </style>
+</head>
+<body>
+    <div class="swiper" id="visual_slide"> <!-- position:relative 기본설정 -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">1</div>
+            <div class="swiper-slide">2</div>
+            <div class="swiper-slide">3</div>
+        </div>
+        <!-- 슬라이드의 부가속성 (페이지 번호, 이전 다음 버튼 등) -->
+        <!-- 주의사항! 지정된 클래스 명 반드시 지키기! -->
+        <div class="swiper-pagination"><!-- 비워두기 --></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <!-- 슬라이드의 부가속성 (페이지 번호, 이전 다음 버튼 등) -->
+    <script>
+        const visual_s = new Swiper('#visual_slide',{
+            autoplay:{delay:1000},
+            loop:true,
+            // swiper-pagination Js
+            pagination:{
+                el:'#visual_slide .swiper-pagination', // 부모 필수
+                type:'bullets',
+            },
+            // navigation
+            navigation:{
+                nextEl:'#visual_slide .swiper-button-next',
+                prevEl:'#visual_slide .swiper-button-prev',
+            },
+        })
+    </script>
+</body>
+</html>

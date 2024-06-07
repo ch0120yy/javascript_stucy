@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper-1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .swiper {width:500px; height:400px;}
+        /* swiper(main-slide) 슬라이드 옵션 포함 전체 부모 */
+        .main-slide {width:800px; margin:50px auto;}
+        /* swiper-wrapper 개별 슬라이드(.swiper-slide) 묶음 부모 */
+        .main-slide .swiper-wrapper {}
+        .main-slide .swiper-wrapper {
+            background-size:cover;
+            background-position:center;
+            color:#FFF; font-size:5rem;
+        }
+        .main-slide .swiper-wrapper .slide1 {
+            background-image:url(https://images.unsplash.com/photo-1717620380382-0fda550f181e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        }
+        .main-slide .swiper-wrapper .slide2 {background-image: url(https://images.unsplash.com/photo-1689877164421-497cddb8d212?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+        .main-slide .swiper-wrapper .slide3 {background-image:url(https://images.unsplash.com/photo-1455758662748-ce95345b13c6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+        /* swiper=slide 사용자가 보는 슬라이드 1개 영역 (자식, 자손 태그 제한 없음) */
+        .main-slide .swiper-wrapper .swiper-slide {}
+        .sub-slide {width:600px; height:700px;}
+        .sub-slide .swiper-wrapper {}
+        .sub-slide .swiper-wrapper .swiper-slide {
+            background-position:center;
+            background-size:cover;
+            font-size:5rem; color:#FFF;
+        }
+        .sub-slide .swiper-wrapper .slide1 {background-image:url(https://images.unsplash.com/photo-1559703248-dcaaec9fab78?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+        .sub-slide .swiper-wrapper .slide2 {background-image:url(https://images.unsplash.com/photo-1551410224-699683e15636?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+        .sub-slide .swiper-wrapper .slide3 {background-image:url(https://images.unsplash.com/photo-1557180295-76eee20ae8aa?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+
+    </style>
+</head>
+<body>
+    <!-- swiper slide plugin 주의사항! -->
+    <!-- swiper 플러그인을 사용하려면 swiper가 제공하는 html, css, js 규칙을 반드시 지켜야한다. 특히 html의 가족관계 및 지정된 클래스명을 지켜야 적용되기 때문에 대소문자, 공백, 스펠링 등 모두 주의해서 사용해야 한다. 대신 swiper가 제공하는 기본 명칭 외에 추가 클래스명은 자유롭게 지정 가능하다. -->
+    <div class="swiper main-slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">1</div>
+            <div class="swiper-slide slide2">2</div>
+            <div class="swiper-slide slide3">3</div>
+        </div>
+    </div>
+    <div class="swiper sub-slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">1</div>
+            <div class="swiper-slide slide2">2</div>
+            <div class="swiper-slide slide3">3</div>
+        </div>
+    </div>
+    <script>
+        // const 변수 = new Swiper('적용대상')
+        // const 변수 = new Swiper('적용대상', {옶션:값, 옵션:값,})
+        const swiper1 = new Swiper('.main-slide',{
+            //슬라이드 진행 방향
+            // direction:'vertical',
+            // 움직이지 않고 제자리 슬라이드 변환
+            effect:'cube', // cube or fade
+            // cube 옵션 : effect:'cube' 설정 시 가능
+            cubeEffect:{
+                shadow:true,
+                shadowOffset:10, // 기본값 20
+                shadowScale:.9, //기본값 1
+            },
+            //자동재생 (기본 3초)
+            autoplay:{delay:1000},
+            // 마지막 슬라이드에서 시작 슬라이드로 자연스럽게 변환
+            loop:true, // 기본값 false
+        })
+        const swiper2 = new Swiper('.sub-slide',{
+            effect:'cards',
+            cardsEffect:{
+                perslideOffset:5,
+            }
+        })
+    </script>
+</body>
+</html>
