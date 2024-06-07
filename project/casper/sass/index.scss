@@ -40,7 +40,7 @@ header {
             // ==================header 모바일 nav clone 디자인
         }
             // 모바일 전용 내비게이션(m_nav 자식 nav)
-            nav { display:none; // 초기 숨기기 (이후 JS처리)
+            nav { /* display:none; */ // 초기 숨기기 (이후 JS처리)
                 z-index: 900;
                 position:absolute; right:0; top:70px;
                 background-color:$bg-wh;

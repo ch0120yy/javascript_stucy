@@ -71,8 +71,7 @@ header .lnb .m_nav .all_nav {
 header .lnb .m_nav .all_nav img {
   width: 100%;
 }
-header .lnb .m_nav nav {
-  display: none;
+header .lnb .m_nav nav { /* display:none; */
   z-index: 900;
   position: absolute;
   right: 0;
